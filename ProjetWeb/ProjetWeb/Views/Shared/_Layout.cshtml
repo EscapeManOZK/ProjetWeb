@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Mon application ASP.NET</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -18,23 +18,42 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Nom d'application", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Projet Web E-Commerce", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Accueil", "Index", "Home")</li>
-                    <li>@Html.ActionLink("À propos de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>
+                        <a href="">Compositeurs</a>
+                            <ul>
+                                <li>@Html.ActionLink("Par époque","Epoque","Recherche")</li>
+                                <li>@Html.ActionLink("Par artiste", "Artiste", "Recherche")</li>
+                                <li>@Html.ActionLink("Par genre", "Genre", "Recherche")</li>
+                                <li>@Html.ActionLink("Par ouevre", "Ouevre", "Recherche")</li>
+                                <li>@Html.ActionLink("Par instrument", "Instrument", "Recherche")</li>
+                            </ul>
+
+                     </li>
                 </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
+                        @Html.Partial("_LoginPartial")
+</div>
         </div>
     </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+                </div>
+                <div class="col-md-4">
+                    <p>@Html.ActionLink("À propos de", "About", "Home")</p>
+                </div>
+                <div class="col-md-4">
+                    <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+                </div>
+            </div>
         </footer>
     </div>
 
