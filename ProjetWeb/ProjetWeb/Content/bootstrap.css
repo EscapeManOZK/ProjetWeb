@@ -36,6 +36,13 @@ summary {
   display: block;
 }
 
+#menu ul {
+    display:none;
+}
+#menu:hover ul {
+    display: block;
+}
+
 audio,
 canvas,
 video {
