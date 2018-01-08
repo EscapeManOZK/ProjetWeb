@@ -23,17 +23,18 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Accueil", "Index", "Home")</li>
-                    <li>
-                        <a href="">Compositeurs</a>
+                    <li id="menu">
+                        <a href="" >Trouvez une oeuvre</a>
                             <ul>
                                 <li>@Html.ActionLink("Par époque","Epoque","Recherche")</li>
                                 <li>@Html.ActionLink("Par artiste", "Artiste", "Recherche")</li>
                                 <li>@Html.ActionLink("Par genre", "Genre", "Recherche")</li>
-                                <li>@Html.ActionLink("Par ouevre", "Ouevre", "Recherche")</li>
+                                <li>@Html.ActionLink("Par oeuvre", "Oeuvre", "Recherche")</li>
                                 <li>@Html.ActionLink("Par instrument", "Instrument", "Recherche")</li>
                             </ul>
 
-                     </li>
+                    </li>
+                    <li>@Html.ActionLink("Pannier", "", "")</li>
                 </ul>
                         @Html.Partial("_LoginPartial")
 </div>
@@ -44,15 +45,12 @@
         <hr />
         <footer>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <p>@Html.ActionLink("À propos de", "About", "Home")</p>
-                </div>
-                <div class="col-md-4">
-                    <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-                </div>
+                </div>  
             </div>
         </footer>
     </div>
