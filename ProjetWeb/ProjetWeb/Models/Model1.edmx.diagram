@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a009e42a6777440c98291aa99f5adf3e" Name="Diagram1">
+        <EntityTypeShape EntityType="DataModel.Abonne" Width="1.5" PointX="6" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Achat" Width="1.5" PointX="8.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Album" Width="1.5" PointX="8.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Composer" Width="1.5" PointX="8.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Composition" Width="1.5" PointX="0.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Composition_Disque" Width="1.5" PointX="12.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Composition_Oeuvre" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Direction" Width="1.5" PointX="8.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Disque" Width="1.5" PointX="10.5" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Editeur" Width="1.5" PointX="6" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Enregistrement" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Genre" Width="1.5" PointX="3.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Instrument" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Instrumentation" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Interpreter" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Musicien" Width="1.5" PointX="6" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Oeuvre" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Orchestres" Width="1.5" PointX="6" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Pays" Width="1.5" PointX="3.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.sysdiagrams" Width="1.5" PointX="10.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Type_Morceaux" Width="1.5" PointX="1.5" PointY="14.875" IsExpanded="true" />
+        <AssociationConnector Association="DataModel.FK__Abonné__Code_Pay__236943A5" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Achat_Abonné" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Achat_Enregistrement" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Album_Editeur" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Album_Genre" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Disque_Album" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Composer_Musicien" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Composer_Oeuvre" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Composition_Oeuvre_Composition" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Contenir_Morceaux_Disque" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Contenir_Morceaux_Morceaux" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Composition_Oeuvre_Oeuvre" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Direction_Morceaux" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Direction_Musicien" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Direction_Orchestres" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Editeur_Pays" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Interpréter_Morceaux" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Musicien_Musicien1" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Instrumentation_Instrument" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Interpréter_Instrument" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Musicien_Instrument" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Instrumentation_Oeuvre" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Interpréter_Musicien" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Musicien_Musicien" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_Oeuvre_Type_Morceaux" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
