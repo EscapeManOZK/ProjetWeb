@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="DataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="Classique_Web_2017Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Abonne">
     <Key>
       <PropertyRef Name="Code_Abonne" />
@@ -552,7 +552,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="DataEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="Classique_Web_2017Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Abonne" EntityType="Self.Abonne" />
     <EntitySet Name="Achat" EntityType="Self.Achat" />
     <EntitySet Name="Album" EntityType="Self.Album" />

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="DataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="Classique_Web_2017Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="Abonne">
     <Key>
       <PropertyRef Name="Code_Abonne" />
@@ -502,7 +502,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="DataModelStoreContainer">
+  <EntityContainer Name="Classique_Web_2017ModelStoreContainer">
     <EntitySet Name="Abonne" EntityType="Self.Abonne" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Achat" EntityType="Self.Achat" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Album" EntityType="Self.Album" Schema="dbo" store:Type="Tables" />

@@ -17,6 +17,10 @@ namespace ProjetWeb.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+<<<<<<< HEAD
+=======
+        private Classique_Web_2017Entities bd = new Classique_Web_2017Entities();
+>>>>>>> origin/Gabriel
 
         public AccountController()
         {
