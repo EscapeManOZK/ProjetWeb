@@ -17,7 +17,6 @@ namespace ProjetWeb.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
-        private DataEntities bd = new DataEntities();
 
         public AccountController()
         {
