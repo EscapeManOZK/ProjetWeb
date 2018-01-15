@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ProjetWeb.Models;
+using System.Net;
 
 namespace ProjetWeb.Controllers
 {
@@ -32,9 +33,18 @@ namespace ProjetWeb.Controllers
         {
             return View();
         }
-        public ActionResult DetailOeuvre()
+        public ActionResult DetailOeuvre(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Oeuvre oeuvre = bd.Oeuvre.Find(id);
+            if (oeuvre == null)
+            {
+                return HttpNotFound();
+            }
+            return View(oeuvre);
         }
 
     }
