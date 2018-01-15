@@ -13,10 +13,10 @@ namespace ProjetWeb.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DataEntities : DbContext
+    public partial class Classique_Web_2017Entities : DbContext
     {
-        public DataEntities()
-            : base("name=DataEntities")
+        public Classique_Web_2017Entities()
+            : base("name=Classique_Web_2017Entities")
         {
         }
     

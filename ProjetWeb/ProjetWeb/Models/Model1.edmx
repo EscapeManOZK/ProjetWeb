@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Classique_Web_2017Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Abonne">
           <Key>
             <PropertyRef Name="Code_Abonne" />
@@ -507,7 +507,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DataModelStoreContainer">
+        <EntityContainer Name="Classique_Web_2017ModelStoreContainer">
           <EntitySet Name="Abonne" EntityType="Self.Abonne" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Achat" EntityType="Self.Achat" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Album" EntityType="Self.Album" Schema="dbo" store:Type="Tables" />
@@ -634,7 +634,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="DataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="Classique_Web_2017Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Abonne">
           <Key>
             <PropertyRef Name="Code_Abonne" />
@@ -1187,7 +1187,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DataEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Classique_Web_2017Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Abonne" EntityType="Self.Abonne" />
           <EntitySet Name="Achat" EntityType="Self.Achat" />
           <EntitySet Name="Album" EntityType="Self.Album" />
@@ -1315,9 +1315,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DataModelStoreContainer" CdmEntityContainer="DataEntities">
+        <EntityContainerMapping StorageEntityContainer="Classique_Web_2017ModelStoreContainer" CdmEntityContainer="Classique_Web_2017Entities">
           <EntitySetMapping Name="Abonne">
-            <EntityTypeMapping TypeName="DataModel.Abonne">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.Abonne">
               <MappingFragment StoreEntitySet="Abonne">
                 <ScalarProperty Name="Code_Abonne" ColumnName="Code_Abonne" />
                 <ScalarProperty Name="Nom_Abonne" ColumnName="Nom_Abonne" />
@@ -1335,7 +1335,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Achat">
-            <EntityTypeMapping TypeName="DataModel.Achat">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.Achat">
               <MappingFragment StoreEntitySet="Achat">
                 <ScalarProperty Name="Code_Achat" ColumnName="Code_Achat" />
                 <ScalarProperty Name="Code_Enregistrement" ColumnName="Code_Enregistrement" />
@@ -1345,7 +1345,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Album">
-            <EntityTypeMapping TypeName="DataModel.Album">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.Album">
               <MappingFragment StoreEntitySet="Album">
                 <ScalarProperty Name="Code_Album" ColumnName="Code_Album" />
                 <ScalarProperty Name="Titre_Album" ColumnName="Titre_Album" />
@@ -1358,7 +1358,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Composer">
-            <EntityTypeMapping TypeName="DataModel.Composer">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.Composer">
               <MappingFragment StoreEntitySet="Composer">
                 <ScalarProperty Name="Code_Composer" ColumnName="Code_Composer" />
                 <ScalarProperty Name="Code_Musicien" ColumnName="Code_Musicien" />
@@ -1367,7 +1367,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Composition">
-            <EntityTypeMapping TypeName="DataModel.Composition">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.Composition">
               <MappingFragment StoreEntitySet="Composition">
                 <ScalarProperty Name="Code_Composition" ColumnName="Code_Composition" />
                 <ScalarProperty Name="Titre_Composition" ColumnName="Titre_Composition" />
@@ -1377,7 +1377,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Composition_Disque">
-            <EntityTypeMapping TypeName="DataModel.Composition_Disque">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.Composition_Disque">
               <MappingFragment StoreEntitySet="Composition_Disque">
                 <ScalarProperty Name="Code_Contenir" ColumnName="Code_Contenir" />
                 <ScalarProperty Name="Code_Disque" ColumnName="Code_Disque" />
@@ -1387,7 +1387,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Composition_Oeuvre">
-            <EntityTypeMapping TypeName="DataModel.Composition_Oeuvre">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.Composition_Oeuvre">
               <MappingFragment StoreEntitySet="Composition_Oeuvre">
                 <ScalarProperty Name="Code_Composer_Oeuvre" ColumnName="Code_Composer_Oeuvre" />
                 <ScalarProperty Name="Code_Oeuvre" ColumnName="Code_Oeuvre" />
@@ -1396,7 +1396,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Direction">
-            <EntityTypeMapping TypeName="DataModel.Direction">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.Direction">
               <MappingFragment StoreEntitySet="Direction">
                 <ScalarProperty Name="Code_Direction" ColumnName="Code_Direction" />
                 <ScalarProperty Name="Code_Musicien" ColumnName="Code_Musicien" />
@@ -1406,7 +1406,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Disque">
-            <EntityTypeMapping TypeName="DataModel.Disque">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.Disque">
               <MappingFragment StoreEntitySet="Disque">
                 <ScalarProperty Name="Code_Disque" ColumnName="Code_Disque" />
                 <ScalarProperty Name="Code_Album" ColumnName="Code_Album" />
@@ -1416,7 +1416,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Editeur">
-            <EntityTypeMapping TypeName="DataModel.Editeur">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.Editeur">
               <MappingFragment StoreEntitySet="Editeur">
                 <ScalarProperty Name="Code_Editeur" ColumnName="Code_Editeur" />
                 <ScalarProperty Name="Nom_Editeur" ColumnName="Nom_Editeur" />
@@ -1425,7 +1425,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Enregistrement">
-            <EntityTypeMapping TypeName="DataModel.Enregistrement">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.Enregistrement">
               <MappingFragment StoreEntitySet="Enregistrement">
                 <ScalarProperty Name="Code_Morceau" ColumnName="Code_Morceau" />
                 <ScalarProperty Name="Titre" ColumnName="Titre" />
@@ -1439,7 +1439,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Genre">
-            <EntityTypeMapping TypeName="DataModel.Genre">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.Genre">
               <MappingFragment StoreEntitySet="Genre">
                 <ScalarProperty Name="Code_Genre" ColumnName="Code_Genre" />
                 <ScalarProperty Name="Libelle_Abrege" ColumnName="Libelle_Abrege" />
@@ -1447,7 +1447,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Instrument">
-            <EntityTypeMapping TypeName="DataModel.Instrument">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.Instrument">
               <MappingFragment StoreEntitySet="Instrument">
                 <ScalarProperty Name="Code_Instrument" ColumnName="Code_Instrument" />
                 <ScalarProperty Name="Nom_Instrument" ColumnName="Nom_Instrument" />
@@ -1456,7 +1456,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Instrumentation">
-            <EntityTypeMapping TypeName="DataModel.Instrumentation">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.Instrumentation">
               <MappingFragment StoreEntitySet="Instrumentation">
                 <ScalarProperty Name="Code_Instrumentation" ColumnName="Code_Instrumentation" />
                 <ScalarProperty Name="Code_Oeuvre" ColumnName="Code_Oeuvre" />
@@ -1465,7 +1465,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Interpreter">
-            <EntityTypeMapping TypeName="DataModel.Interpreter">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.Interpreter">
               <MappingFragment StoreEntitySet="Interpreter">
                 <ScalarProperty Name="Code_Interpreter" ColumnName="Code_Interpreter" />
                 <ScalarProperty Name="Code_Morceau" ColumnName="Code_Morceau" />
@@ -1475,7 +1475,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Musicien">
-            <EntityTypeMapping TypeName="DataModel.Musicien">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.Musicien">
               <MappingFragment StoreEntitySet="Musicien">
                 <ScalarProperty Name="Code_Musicien" ColumnName="Code_Musicien" />
                 <ScalarProperty Name="Nom_Musicien" ColumnName="Nom_Musicien" />
@@ -1490,7 +1490,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Oeuvre">
-            <EntityTypeMapping TypeName="DataModel.Oeuvre">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.Oeuvre">
               <MappingFragment StoreEntitySet="Oeuvre">
                 <ScalarProperty Name="Code_Oeuvre" ColumnName="Code_Oeuvre" />
                 <ScalarProperty Name="Titre_Oeuvre" ColumnName="Titre_Oeuvre" />
@@ -1504,7 +1504,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Orchestres">
-            <EntityTypeMapping TypeName="DataModel.Orchestres">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.Orchestres">
               <MappingFragment StoreEntitySet="Orchestres">
                 <ScalarProperty Name="Code_Orchestre" ColumnName="Code_Orchestre" />
                 <ScalarProperty Name="Nom_Orchestre" ColumnName="Nom_Orchestre" />
@@ -1512,7 +1512,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Pays">
-            <EntityTypeMapping TypeName="DataModel.Pays">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.Pays">
               <MappingFragment StoreEntitySet="Pays">
                 <ScalarProperty Name="Code_Pays" ColumnName="Code_Pays" />
                 <ScalarProperty Name="Nom_Pays" ColumnName="Nom_Pays" />
@@ -1520,7 +1520,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="DataModel.sysdiagrams">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -1531,7 +1531,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Type_Morceaux">
-            <EntityTypeMapping TypeName="DataModel.Type_Morceaux">
+            <EntityTypeMapping TypeName="Classique_Web_2017Model.Type_Morceaux">
               <MappingFragment StoreEntitySet="Type_Morceaux">
                 <ScalarProperty Name="Code_Type" ColumnName="Code_Type" />
                 <ScalarProperty Name="Libelle_Type" ColumnName="Libelle_Type" />
