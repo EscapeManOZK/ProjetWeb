@@ -4,6 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ProjetWeb.Models;
+<<<<<<< HEAD
+=======
+using System.Data.Entity;
+>>>>>>> cf95d7f291b1b143324236f3a1b4650880f0b3ac
 
 namespace ProjetWeb.Controllers
 {
@@ -18,8 +22,10 @@ namespace ProjetWeb.Controllers
         }
         public ActionResult Artiste()
         {
-            return View();
+            var musicien = bd.Musicien.Include(m => m.Genre).Include(m => m.Instrument).Include(m => m.Pays);
+            return View(musicien.ToList());
         }
+
         public ActionResult Genre()
         {
             return View();
@@ -35,6 +41,14 @@ namespace ProjetWeb.Controllers
         public ActionResult DetailOeuvre()
         {
             return View();
+        }
+
+        public ActionResult Photo(int id)
+        {
+            var music = bd.Musicien.Single(g => g.Code_Musicien == id);
+            if (music.Photo != null)
+                return File(music.Photo, "image/jpeg");
+            else return null;
         }
 
     }
