@@ -370,6 +370,7 @@
     <Content Include="Views\Recherche\Genre.cshtml" />
     <Content Include="Views\Recherche\Oeuvre.cshtml" />
     <Content Include="Views\Recherche\Instrument.cshtml" />
+    <Content Include="Views\Recherche\DetailOeuvre.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

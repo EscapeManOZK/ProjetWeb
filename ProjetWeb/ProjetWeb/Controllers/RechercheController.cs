@@ -13,7 +13,8 @@ namespace ProjetWeb.Controllers
         // GET: Recherche
         public ActionResult Epoque()
         {
-            return View();
+            var oeuvre = bd.Oeuvre.OrderBy(m => m.Annee).Where(m => m.Annee.Value>0);
+            return View(oeuvre.ToList());
         }
         public ActionResult Artiste()
         {
@@ -28,6 +29,10 @@ namespace ProjetWeb.Controllers
             return View();
         }
         public ActionResult Instrument()
+        {
+            return View();
+        }
+        public ActionResult DetailOeuvre()
         {
             return View();
         }
