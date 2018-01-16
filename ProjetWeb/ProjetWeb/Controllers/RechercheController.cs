@@ -55,6 +55,10 @@ namespace ProjetWeb.Controllers
                 return File(music.Photo, "image/jpeg");
             else return null;
         }
-
+        public ActionResult Audio(int? id)
+        {
+            var sons = bd.Enregistrement.Single(e => e.Code_Morceau == id);
+            return File(sons.Extrait, "mp3");
+        }
     }
 }
