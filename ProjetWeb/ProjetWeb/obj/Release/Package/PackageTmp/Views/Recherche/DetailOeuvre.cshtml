@@ -1,0 +1,62 @@
+﻿@model ProjetWeb.Models.Oeuvre
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Musicien</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titre_Oeuvre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titre_Oeuvre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sous_Titre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sous_Titre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tonalite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tonalite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Code_Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Code_Type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Annee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Annee)
+        </dd>
+        <dt>
+            Extrait
+        </dt>
+        <dd>
+            <audio src="@Url.Action("Audio","Recherche",new {id = Model.Code_Oeuvre})" controls></audio>
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Code_Oeuvre }) |
+    @Html.ActionLink("Back to List", "Index","Home")
+</p> 

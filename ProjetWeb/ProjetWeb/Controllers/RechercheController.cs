@@ -29,11 +29,13 @@ namespace ProjetWeb.Controllers
         }
         public ActionResult Oeuvre()
         {
-            return View();
+            var oeuvre = bd.Oeuvre.OrderBy(m => m.Titre_Oeuvre);
+            return View(oeuvre.ToList());
         }
         public ActionResult Instrument()
         {
-            return View();
+            var Instrument = bd.Instrument.OrderBy(m => m.Nom_Instrument);
+            return View(Instrument.ToList());
         }
         public ActionResult DetailOeuvre(int? id)
         {
@@ -59,6 +61,11 @@ namespace ProjetWeb.Controllers
         {
             var sons = bd.Enregistrement.Single(e => e.Code_Morceau == id);
             return File(sons.Extrait, "mp3");
+        }
+        public ActionResult DetailInstru(int? id)
+        {
+            var oeuvre = bd.Instrumentation.Include(m=> m.Oeuvre).Include(m=>m.Instrument).Where(m=>m.Code_Instrument==id).OrderBy(m=>m.Oeuvre.Titre_Oeuvre);
+            return View(oeuvre);
         }
     }
 }

@@ -320,6 +320,7 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\ro.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -371,6 +372,7 @@
     <Content Include="Views\Recherche\Oeuvre.cshtml" />
     <Content Include="Views\Recherche\Instrument.cshtml" />
     <Content Include="Views\Recherche\DetailOeuvre.cshtml" />
+    <Content Include="Views\Recherche\DetailInstru.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
