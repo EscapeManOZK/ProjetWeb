@@ -2,9 +2,11 @@
 
 @{
     ViewBag.Title = "Detail";
+    string NomInstrument= "";
+    if (Model.FirstOrDefault() != default(IEnumerable<ProjetWeb.Models.Instrumentation>) ){ NomInstrument = Model.First().Instrument.Nom_Instrument; }
 }
 
-<h2>Oeuvre de L'instrument:  </h2> <p src="@Url.Action("NomInstrument", "Recherche",Model.First().Code_Instrument)" />
+<h2>Oeuvre de L'instrument:   @NomInstrument </h2>
 
     <table class="table">
         <tr>
