@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ProjetWeb.Models.Album>
+
+
+@{
+    ViewBag.Title = "Album";
+}
+
+<h2>Album</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Nom Musicien
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+               @Html.ActionLink(item.Titre_Album, "DetailAlbum", new { id = item.Code_Album })
+            </td>
+
+            <td>
+                 <!--Html.ActionLink(item.Genre.Libelle_Abrege, "DetailAlbum", new { id = item.Code_Album })-->
+            </td>
+
+            <td>
+                <img src="@Url.Action("Photo","Recherche", new { id = Html.DisplayFor(modelItem => item.Code_Album)})" />
+            </td>
+        </tr>
+    }
+
+</table>
+

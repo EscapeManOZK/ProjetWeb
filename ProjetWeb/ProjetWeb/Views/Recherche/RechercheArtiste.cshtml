@@ -1,20 +1,14 @@
-﻿@model IEnumerable<ProjetWeb.Models.Musicien>
+﻿@model List < ProjetWeb.Models.Musicien>
 
 @{
-    ViewBag.Title = "Artiste";
+    ViewBag.Title = "RechercheArtiste";
 }
 
-<h2>Artiste</h2>
+<div>
 
-<ul>
-    @{
-        for (char x = 'A'; x < 'Z'; x++)
-        {
-             @Html.ActionLink(x.ToString(),"RechercheArtiste", new { lettre = x })
-             
-        }
-    }
-</ul>
+    @Html.ActionLink("Retour", "Artiste",(string)null)
+
+</div>
 
 <table class="table">
     <tr>
@@ -28,19 +22,19 @@
             Année de Naissance
         </th>
         <th>
-           Année de Mort
+            Année de Mort
         </th>
         <th>
-            Photo 
+            Photo
         </th>
         <th>
-            Libellee 
+            Libellee
         </th>
         <th>
             Nom Instrument
         </th>
         <th>
-            Nom du Pays 
+            Nom du Pays
         </th>
         <th></th>
     </tr>
