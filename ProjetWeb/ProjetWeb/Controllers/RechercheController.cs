@@ -83,22 +83,24 @@ namespace ProjetWeb.Controllers
             return View(musicien);
         }
 
-        public ActionResult DetailMusicien(int? id,string nom)
+        public ActionResult DetailMusicienO(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             var musicien = (from data in bd.Musicien
-                                 join composer in bd.Composer on data.Code_Musicien equals composer.Code_Oeuvre
-                                 join oeuvre in bd.Oeuvre on composer.Code_Oeuvre equals oeuvre.Code_Oeuvre
+                                 join composer in bd.Composer on data.Code_Musicien equals composer.Code_Musicien
+                                join oeuv in bd.Oeuvre on composer.Code_Oeuvre equals oeuv.Code_Oeuvre
+                                 where(oeuv.Code_Oeuvre == id)
                                  select data);
             if (musicien == null)
             {
                 return HttpNotFound();
             }
 
-            return View(musicien);
+            return View(musicien.ToList());
         }
 
         public ActionResult Album(int? id)
@@ -161,6 +163,26 @@ namespace ProjetWeb.Controllers
         {
             var oeuvre = bd.Instrumentation.Include(m=> m.Oeuvre).Include(m=>m.Instrument).Where(m=>m.Code_Instrument==id).OrderBy(m=>m.Oeuvre.Titre_Oeuvre); 
             return View(oeuvre);
+        }
+
+        public ActionResult OeuvreMusicien(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var oeuvres = (from data in bd.Oeuvre
+                            join composer in bd.Composer on data.Code_Oeuvre equals composer.Code_Oeuvre
+                           join oeuv in bd.Musicien on composer.Code_Musicien equals oeuv.Code_Musicien
+                           where (oeuv.Code_Musicien == id)
+                            select data);
+            if (oeuvres == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(oeuvres.ToList());
         }
     }
 }

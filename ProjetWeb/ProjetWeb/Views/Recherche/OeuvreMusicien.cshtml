@@ -1,18 +1,12 @@
 ﻿@model IEnumerable<ProjetWeb.Models.Oeuvre>
 
 @{
-    ViewBag.Title = "Oeuvre";
+    ViewBag.Title = "OeuvreMusicien";
 }
 
-<h2>Oeuvres</h2>
-
+<h2>Oeuvres du Musicien</h2>
 
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Titre_Oeuvre)
-        </th>
-    </tr>
 
     @foreach (var item in Model)
     {
@@ -21,7 +15,7 @@
                 @Html.DisplayFor(modelItem => item.Titre_Oeuvre)
             </td>
             <td>
-                @Html.ActionLink("Details", "DetailOeuvre", new { id = item.Code_Oeuvre }) 
+                @Html.ActionLink("Details", "DetailOeuvre", new { id = item.Code_Oeuvre })
             </td>
         </tr>
     }

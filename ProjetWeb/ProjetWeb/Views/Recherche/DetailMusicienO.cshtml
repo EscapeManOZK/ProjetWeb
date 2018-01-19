@@ -1,0 +1,91 @@
+﻿@model IEnumerable<ProjetWeb.Models.Musicien>
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detail du compositeur</h2>
+
+<div>
+    <h4>Musicien</h4>
+    @Html.DisplayFor(model => model.First().Nom_Musicien);
+
+
+@foreach (var m in Model)
+{
+    <dl class="dl-horizontal">
+        <dt>
+            Nom Musicien
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => m.Nom_Musicien)
+        </dd>
+
+        <dt>
+            Prénom Musicien
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => m.Prenom_Musicien)
+        </dd>
+
+        <dt>
+            Année de Naissance
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => m.Annee_Naissance)
+        </dd>
+
+        <dt>
+            Année de Mort
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => m.Annee_Mort)
+        </dd>
+
+        <dt>
+            Libelle du genre
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => m.Genre.Libelle_Abrege)
+        </dd>
+
+        <dt>
+            Nom de l'instrument
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => m.Instrument.Nom_Instrument)
+        </dd>
+
+        <dt>
+            Nom du Pays
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => m.Pays.Nom_Pays)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+
+        <dd>
+            <img src="@Url.Action("Photo", "Recherche", new { id = m.Code_Musicien })" />
+        </dd>
+
+        <p>
+            @Html.ActionLink("Back to List", "Index") |
+            @Html.ActionLink("Accéder aux Albums", "Album", new { id = m.Code_Musicien })
+            @Html.ActionLink("Accéder aux Oeuvre", "OeuvreMusicien", new { id = m.Code_Musicien })
+        </p>
+    </dl>
+}
+
+</div>
+

@@ -378,6 +378,8 @@
     <Content Include="Views\Recherche\DetailMusicien.cshtml" />
     <Content Include="Views\Recherche\RechercheArtiste.cshtml" />
     <Content Include="Views\Recherche\DetailGenre.cshtml" />
+    <Content Include="Views\Recherche\DetailMusicienO.cshtml" />
+    <Content Include="Views\Recherche\OeuvreMusicien.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

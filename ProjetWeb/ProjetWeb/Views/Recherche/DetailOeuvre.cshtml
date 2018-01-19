@@ -24,7 +24,7 @@
         </dt>
 
         <dd>
-            @Html.ActionLink("Details", "DetailMusicien", new { id = Model.Code_Oeuvre, nom = Model.Titre_Oeuvre})
+            @Html.ActionLink("Details", "DetailMusicienO", new { id = Model.Code_Oeuvre})
         </dd>
 
         <dt>
@@ -58,6 +58,5 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Code_Oeuvre }) |
     @Html.ActionLink("Back to List", "Index","Home")
 </p> 
