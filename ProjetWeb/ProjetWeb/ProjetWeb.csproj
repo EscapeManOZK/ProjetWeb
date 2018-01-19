@@ -377,6 +377,7 @@
     <Content Include="Views\Recherche\Album.cshtml" />
     <Content Include="Views\Recherche\DetailMusicien.cshtml" />
     <Content Include="Views\Recherche\RechercheArtiste.cshtml" />
+    <Content Include="Views\Recherche\DetailGenre.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

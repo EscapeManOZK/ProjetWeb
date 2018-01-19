@@ -37,8 +37,15 @@ namespace ProjetWeb.Controllers
         }
         public ActionResult Genre()
         {
-            return View();
+            var musicien = bd.Genre.OrderBy(m => m.Libelle_Abrege);
+            return View(musicien.ToList());
         }
+        public ActionResult DetailGenre(int id)
+        {
+            var musicien = bd.Album.OrderBy(m => m.Titre_Album).Where(m => m.Code_Album == id);
+            return View(musicien.ToList());
+        }
+
         public ActionResult Oeuvre()
         {
             var oeuvre = bd.Oeuvre.OrderBy(m => m.Titre_Oeuvre);
@@ -75,6 +82,25 @@ namespace ProjetWeb.Controllers
             }
             return View(musicien);
         }
+
+        public ActionResult DetailMusicien(int? id,string nom)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var musicien = (from data in bd.Musicien
+                                 join composer in bd.Composer on data.Code_Musicien equals composer.Code_Oeuvre
+                                 join oeuvre in bd.Oeuvre on composer.Code_Oeuvre equals oeuvre.Code_Oeuvre
+                                 select data);
+            if (musicien == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(musicien);
+        }
+
         public ActionResult Album(int? id)
         {
             if (id == null)

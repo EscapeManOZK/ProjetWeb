@@ -2,16 +2,17 @@
 
 @{
     ViewBag.Title = "Details";
+    
 }
 
 <h2>Details</h2>
 
 <div>
-    <h4>Musicien</h4>
+    <h4>Oeuvres</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Titre_Oeuvre)
+            Titre
         </dt>
 
         <dd>
@@ -19,7 +20,15 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Sous_Titre)
+            Musicien: 
+        </dt>
+
+        <dd>
+            @Html.ActionLink("Details", "DetailMusicien", new { id = Model.Code_Oeuvre, nom = Model.Titre_Oeuvre})
+        </dd>
+
+        <dt>
+            Sous-titre
         </dt>
 
         <dd>
@@ -27,22 +36,14 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Tonalite)
+            Tonalité
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Tonalite)
         </dd>
-
         <dt>
-            @Html.DisplayNameFor(model => model.Code_Type)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Code_Type)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Annee)
+            Année 
         </dt>
 
         <dd>
