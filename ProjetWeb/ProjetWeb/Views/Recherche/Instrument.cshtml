@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ProjetWeb.Models.Instrument>
+
+@{
+    ViewBag.Title = "Instrument";
+}
+
+<h2>Artiste</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Instrument)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom_Instrument)
+            </td>
+            <td>
+                <img src="@Url.Action("Photo","Recherche", new { id = Html.DisplayFor(modelItem => item.Code_Instrument)})" />
+            </td>
+            <td>
+                @Html.ActionLink("Details", "DetailInstru", new { id = item.Code_Instrument })
+            </td>
+            <td>
+            </td>
+        </tr>
+    }
+
+</table>
