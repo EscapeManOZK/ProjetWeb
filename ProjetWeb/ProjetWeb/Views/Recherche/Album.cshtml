@@ -22,7 +22,7 @@
             </td>
 
             <td>
-                <!--Html.ActionLink(item.Genre.Libelle_Abrege, "DetailAlbum", new { id = item.Code_Album })-->
+                @Html.ActionLink("Ajouter au panier", "../Home/AjoutPanier", new { id = item.Code_Album })
             </td>
 
             <td>

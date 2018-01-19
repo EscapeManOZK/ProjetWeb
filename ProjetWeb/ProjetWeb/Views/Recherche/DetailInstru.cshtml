@@ -4,12 +4,12 @@
     ViewBag.Title = "Detail";
 }
 
-<h2>Artiste</h2>
+<h2>Oeuvre de L'instrument:  </h2> <p src="@Url.Action("NomInstrument", "Recherche",Model.First().Code_Instrument)" />
 
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Oeuvre.Titre_Oeuvre)
+                Titre Oeuvre
             </th>
             <th>
                Detail

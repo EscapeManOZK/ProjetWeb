@@ -111,14 +111,29 @@ namespace ProjetWeb.Controllers
                 return File(album.Pochette, "image/jpeg");
             else return null;
         }
+
+        public ActionResult Instru(int id)
+        {
+            var instru = bd.Instrument.Single(g => g.Code_Instrument == id);
+            if (instru.Image != null)
+                return File(instru.Image, "image/jpeg");
+            else return null;
+        }
         public ActionResult Audio(int? id)
         {
             var sons = bd.Enregistrement.Single(e => e.Code_Morceau == id);
             return File(sons.Extrait, "mp3");
         }
+
+        public ActionResult NomInstrument(int id) {
+
+            var instrument = bd.Instrument.Where(m => m.Code_Instrument == id);
+            return View(instrument);
+        }
+
         public ActionResult DetailInstru(int? id)
         {
-            var oeuvre = bd.Instrumentation.Include(m=> m.Oeuvre).Include(m=>m.Instrument).Where(m=>m.Code_Instrument==id).OrderBy(m=>m.Oeuvre.Titre_Oeuvre);
+            var oeuvre = bd.Instrumentation.Include(m=> m.Oeuvre).Include(m=>m.Instrument).Where(m=>m.Code_Instrument==id).OrderBy(m=>m.Oeuvre.Titre_Oeuvre); 
             return View(oeuvre);
         }
     }
