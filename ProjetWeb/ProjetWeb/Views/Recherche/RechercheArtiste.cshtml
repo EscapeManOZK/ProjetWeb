@@ -1,0 +1,77 @@
+﻿@model List<ProjetWeb.Models.Musicien>
+
+@{
+    ViewBag.Title = "RechercheArtiste";
+}
+
+<div>
+
+    @Html.ActionLink("Retour", "Artiste", (string)null)
+
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            Nom Musicien
+        </th>
+        <th>
+            Prénom Musicien
+        </th>
+        <th>
+            Année de Naissance
+        </th>
+        <th>
+            Année de Mort
+        </th>
+        <th>
+            Photo
+        </th>
+        <th>
+            Libellee
+        </th>
+        <th>
+            Nom Instrument
+        </th>
+        <th>
+            Nom du Pays
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom_Musicien)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prenom_Musicien)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Annee_Naissance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Annee_Mort)
+            </td>
+            <td>
+                <img src="@Url.Action("Photo","Recherche", new { id = Html.DisplayFor(modelItem => item.Code_Musicien)})" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre.Libelle_Abrege)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Instrument.Nom_Instrument)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pays.Nom_Pays)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Code_Musicien }) |
+                @Html.ActionLink("Details", "DetailMusicien", new { id = item.Code_Musicien }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Code_Musicien })
+            </td>
+        </tr>
+    }
+
+</table>
