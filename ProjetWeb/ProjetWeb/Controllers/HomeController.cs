@@ -19,5 +19,13 @@ namespace ProjetWeb.Controllers
 
             return View();
         }
+        public ActionResult Panier()
+        {
+            if (!Request.IsAuthenticated) { 
+                    return RedirectToAction("LogIn", "Account", new { area = "" });
+                }else{
+                return View();
+            }
+        }
     }
 }

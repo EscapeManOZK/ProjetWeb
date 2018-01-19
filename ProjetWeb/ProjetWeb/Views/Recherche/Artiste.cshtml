@@ -6,34 +6,41 @@
 
 <h2>Artiste</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<ul>
+    @{
+        for (char x = 'A'; x < 'Z'; x++)
+        {
+            @Html.ActionLink(x.ToString(), "RechercheArtiste", new { lettre = x })
+
+        }
+    }
+</ul>
+
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Nom_Musicien)
+            Nom Musicien
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Prenom_Musicien)
+            Prénom Musicien
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Annee_Naissance)
+            Année de Naissance
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Annee_Mort)
+            Année de Mort
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Photo)
+            Photo
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Genre.Libelle_Abrege)
+            Libellee
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Instrument.Nom_Instrument)
+            Nom Instrument
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Pays.Nom_Pays)
+            Nom du Pays
         </th>
         <th></th>
     </tr>
@@ -67,7 +74,7 @@
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Code_Musicien }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Code_Musicien }) |
+                @Html.ActionLink("Details", "DetailMusicien", new { id = item.Code_Musicien }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.Code_Musicien })
             </td>
         </tr>

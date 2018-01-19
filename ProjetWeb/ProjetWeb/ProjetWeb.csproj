@@ -373,6 +373,10 @@
     <Content Include="Views\Recherche\Instrument.cshtml" />
     <Content Include="Views\Recherche\DetailOeuvre.cshtml" />
     <Content Include="Views\Recherche\DetailInstru.cshtml" />
+    <Content Include="Views\Home\Panier.cshtml" />
+    <Content Include="Views\Recherche\Album.cshtml" />
+    <Content Include="Views\Recherche\DetailMusicien.cshtml" />
+    <Content Include="Views\Recherche\RechercheArtiste.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
