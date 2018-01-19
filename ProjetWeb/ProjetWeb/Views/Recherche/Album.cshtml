@@ -21,12 +21,12 @@
                 @Html.ActionLink(item.Titre_Album, "DetailAlbum", new { id = item.Code_Album })
             </td>
 
-            <td>
-                <!--Html.ActionLink(item.Genre.Libelle_Abrege, "DetailAlbum", new { id = item.Code_Album })-->
-            </td>
 
             <td>
                 <img src="@Url.Action("Photo","Recherche", new { id = Html.DisplayFor(modelItem => item.Code_Album)})" />
+            </td>
+            <td>
+                @Html.ActionLink("Ajouter au panier", "../Home/AjoutPanier", new { id = item.Code_Album })
             </td>
         </tr>
     }
